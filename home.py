@@ -1,6 +1,25 @@
 import streamlit as st
 from openai import OpenAI
 
+def hide_streamlit_defualt_menu_footer():
+   hide_menu_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            </style>
+            """
+   st.markdown(hide_menu_style, unsafe_allow_html=True)
+    
+def set_footer():
+   footer = f'''
+            <footer style="background-color: rgb(16, 18, 22);color: rgb(69, 70, 76);text-align: right;padding: 10px;position: fixed;bottom: 0;border-top-left-radius: 15px;border-top-right-radius: 15px;z-index: 1000;">
+               <p>&copy; {datetime.now().strftime('%Y')} Daniel Rodriguez. All rights reserved.</p>
+            </footer>
+            '''
+   st.markdown(footer, unsafe_allow_html=True)
+
+set_footer()
+hide_streamlit_defualt_menu_footer()
+
 st.title("Article Summarization Bot")
 st.warning("We appreciate your engagement! Please note, this demo is designed to process a maximum of 3 interactions and may be unavailable if too many people use the service concurrently. Thank you for your understanding.")
 
