@@ -4,7 +4,7 @@ from openai import OpenAI
 def hide_streamlit_defualt_menu_footer():
    hide_menu_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+            .stAppToolbar {visibility: hidden;}
             </style>
             """
    st.markdown(hide_menu_style, unsafe_allow_html=True)
