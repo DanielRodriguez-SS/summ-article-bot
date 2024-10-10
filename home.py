@@ -1,6 +1,9 @@
 import streamlit as st
 from openai import OpenAI
 
+st.set_page_config(page_title="ArticleBot",
+                       page_icon="🎛️")
+
 def hide_streamlit_defualt_menu_footer():
    hide_menu_style = """
             <style>
@@ -11,9 +14,6 @@ def hide_streamlit_defualt_menu_footer():
    st.markdown(hide_menu_style, unsafe_allow_html=True)
     
 hide_streamlit_defualt_menu_footer()
-
-st.set_page_config(page_title="ArticleBot",
-                       page_icon="🎛️")
 
 st.title("Article Summarization Bot")
 st.warning("We appreciate your engagement! Please note, this demo is designed to process a maximum of 3 interactions and may be unavailable if too many people use the service concurrently. Thank you for your understanding.")
