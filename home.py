@@ -5,6 +5,7 @@ def hide_streamlit_defualt_menu_footer():
    hide_menu_style = """
             <style>
             .stAppToolbar {visibility: hidden;}
+            ._link_19b1q_10 {visibility: hidden;}
             </style>
             """
    st.markdown(hide_menu_style, unsafe_allow_html=True)
