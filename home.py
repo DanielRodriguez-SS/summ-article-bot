@@ -9,15 +9,6 @@ def hide_streamlit_defualt_menu_footer():
             """
    st.markdown(hide_menu_style, unsafe_allow_html=True)
     
-def set_footer():
-   footer = f'''
-            <footer style="background-color: rgb(16, 18, 22);color: rgb(69, 70, 76);text-align: right;padding: 10px;position: fixed;bottom: 0;border-top-left-radius: 15px;border-top-right-radius: 15px;z-index: 1000;">
-               <p>&copy; Daniel Rodriguez. All rights reserved.</p>
-            </footer>
-            '''
-   st.markdown(footer, unsafe_allow_html=True)
-
-set_footer()
 hide_streamlit_defualt_menu_footer()
 
 st.title("Article Summarization Bot")
